@@ -1,0 +1,8 @@
+{
+    "views": 0,
+    "uptime": 0,
+    "texuses": 0,
+    "texerrs": 0,
+    "scmluses": 0,
+    "scmlerrs": 0
+}
