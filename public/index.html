@@ -3,30 +3,34 @@
 <html>
 
 <head>
-    <title>Nexus of Worlds</title>
-    <link rel='icon' type='image/png' href='https://axiomdev.net' />
+    <title>Online ktools</title>
+    <link rel='icon' type='image/png' href='./favicon.jpeg' />
     <link rel='stylesheet' href='./style.css'>
     <script src='./socket.io/socket.io.min.js'></script>
     <script src='./script.js'></script>
 </head>
 
 <body>
-    <h1>Online ktools for Don't Starve Together</h1>
-    <h2>Version 1.1.0</h2>
-    This project can convert compiled images and animations from Don't Starve Together<br>
-    and convert them back into pictures and Spriter projects for use in modding.<br><br>
-    Original ktools by: <a href="https://github.com/nsimplex/ktools">nsimplex</a><br>
-    This project uses a ktools fork by: <a href="https://github.com/dstmodders/ktools">victorpopkov</a> (commit 186)<br>
-    And this project is developed by: <a href="https://github.com/ArmoredFuzzball">ArmoredFuzzball</a><br>
-    <a href="https://github.com/ArmoredFuzzball/ktools-online">Project Github</a><br>
-    <h4>TEX to PNG (~10MB max)</h4>
-    <input type="file" onchange="uploadTEX(this.files)" accept=".tex" />
-    <br>Will download a png when finished.<br><br>
-
-    <h4>Anim zip to Spriter project (~10MB max)</h4>
-    <z>Please ensure there is a build.bin and anim.bin (and tex atlases, if there are any) in your zip!</z><br>
-    <input type="file" onchange="uploadBIN(this.files)" accept=".zip" />
-    <br>Will download a zip when finished.<br>
+    <div id="background"></div>
+    <div id="imgcredit">Image: Klei Entertainment</div>
+    <div id="center">
+        <h1>Online ktools for Don't Starve Together</h1>
+        <h2>Version 1.2.0</h2>
+        This project can convert compiled images and animations from Don't Starve Together<br>
+        and convert them back into pictures and Spriter projects for use in modding.<br><br>
+        Original ktools by: <a href="https://github.com/nsimplex/ktools">nsimplex</a><br>
+        This project uses a ktools fork by: <a href="https://github.com/dstmodders/ktools">victorpopkov</a> (commit 186)<br>
+        And this project is developed by: <a href="https://github.com/ArmoredFuzzball">ArmoredFuzzball</a><br>
+        <a href="https://github.com/ArmoredFuzzball/ktools-online">Project Github</a><br>
+        <h4>TEX to PNG (~10MB max)</h4>
+        <input type="file" onchange="uploadTEX(this.files)" accept=".tex" />
+        <br>Will download a png when finished.<br><br>
+    
+        <h4>Anim zip to Spriter project (~10MB max)</h4>
+        <z>Please ensure there is a build.bin and anim.bin (and tex atlases, if there are any) in your zip!</z><br>
+        <input type="file" onchange="uploadBIN(this.files)" accept=".zip" />
+        <br>Will download a zip when finished.<br>
+    </div>
 </body>
 
 </html>
