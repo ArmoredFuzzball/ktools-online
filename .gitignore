@@ -1,2 +1,4 @@
 node_modules/
-upload/
+upload/*
+start.bat
+start.sh

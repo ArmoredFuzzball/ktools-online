@@ -1,25 +1,14 @@
-const express = require('express');
-const compress = require('compression');
-const app = express();
-const server = require('http').createServer(app);
-const io = require('socket.io')(server, { path: '/ktools/socket.io', perMessageDeflate: {}, maxHttpBufferSize: 10e6 /*10 MB*/ });
-const port = 8065;
+const { start } = require("./builder.js");
 const { writeFileSync, readFileSync, unlinkSync, rmSync } = require("fs");
 const { spawnSync } = require("child_process");
-
-app.use(compress({ threshold: 100 }));
-app.use('/ktools', express.static('public'));
-
-server.listen(port, () => console.log(`listening on port ${port}`));
+const io = start();
 
 var metrics = JSON.parse(readFileSync('metrics.txt'));
 
 io.on("connection", (socket) => {
     metrics.views++;
-
     socket.on("uploadTEX", (file, cb) => TEXtoPNG(socket.id, file, cb));
     socket.on("uploadBIN", (file, cb) => BINtoSCML(socket.id, file, cb));
-
 });
 
 function TEXtoPNG(id, file, cb) {
