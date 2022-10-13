@@ -1,1 +1,2 @@
-nodemon server.js
+#!/bin/bash
+screen -dmS ktools nodemon server.js

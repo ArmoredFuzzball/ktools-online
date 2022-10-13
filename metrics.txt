@@ -1,8 +1,8 @@
 {
-    "views": 0,
-    "uptime": 0,
+    "views": 9,
+    "uptime": 2650,
     "texuses": 0,
     "texerrs": 0,
-    "scmluses": 0,
-    "scmlerrs": 0
+    "scmluses": 8,
+    "scmlerrs": 1
 }
