@@ -1,4 +1,5 @@
 node_modules/
-upload/*
+convert/
+public/metrics.txt
 start.bat
 start.sh
