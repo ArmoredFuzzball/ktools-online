@@ -1,0 +1,1 @@
+screen -mS ktools nodemon --ignore ./public server.js

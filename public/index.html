@@ -13,25 +13,25 @@
 <body>
     <div id="background"></div>
     <div id="imgcredit">Image: Klei Entertainment</div>
-    <a id="metrics" href="metrics.txt">See how many people have used this site!</a>
+    <a id="metrics">Powered by Axiom Development</a>
     <div id="center">
         <h1>Online ktools for Don't Starve Together</h1>
-        <h2>Version 1.3.0-164</h2>
+        <h2>Version 1.4.0-172 (Updated 12/6/2023)</h2>
         This project can take compiled ktex images and zip animations from Don't Starve Together<br>
         and convert them back into .png and Spriter projects (.scml) for use in modding.<br><br>
         Original ktools by: <a href="https://github.com/nsimplex/ktools">nsimplex</a><br>
-        This project uses a ktools fork by: <a href="https://github.com/dstmodders/docker-ktools">victorpopkov</a> (commit 164)<br>
+        This project uses a ktools fork by: <a href="https://github.com/dstmodders/docker-ktools">victorpopkov</a> (commit 172)<br>
         And this project is developed by: <a href="https://github.com/ArmoredFuzzball">ArmoredFuzzball</a>🦊<br>
         <a href="https://github.com/ArmoredFuzzball/ktools-online">Project Github</a><br><br>
         Please ensure there is a build.bin and anim.bin (and tex atlases, if there are any) in your anim zip!<br>
-        It is possible that the build.bin may be located separately in the Klei source code!<br><br>
-        <z style="font-size: 16px;">Must be a .tex or a .zip file. 50MB max.</z><br>
+        It is possible (likely) that these are located separately in the Klei source code!<br><br>
+        <p class="status">Must be a .tex or a .zip file. 50MB max.</p>
         <form ref='uploadForm' id='uploadForm' action='./' method='post' encType="multipart/form-data">
             <input type="file" name="file" />
             <input type='submit' value='Upload!' />
         </form>
         <div id="data">
-            <div id="progressNumber" style="color: crimson; font-size: 16px;">Ready...</div>
+            <p id="progressNumber" class="status">Ready...</p>
         </div>
     </div>
 </body>
