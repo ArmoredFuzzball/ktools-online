@@ -28,13 +28,10 @@ app.post(path + '/tex', async (req, res) => {
     command.stdin.write(`ktech ./${name}.tex; rm ./${name}.tex;`);
     command.stdin.end();
 
-    command.stderr.on('data', (err) => {
-        console.error(err);
-        return res.status(500).send('ktech cannot process the file.');
-    });
+    command.stderr.on('data', (err) => console.error(err));
 
     command.on('close', (e) => {
-        if (e) return;
+        if (e) return res.status(500).send('ktech cannot process the file.');
         const data   = readFileSync(`${__dirname}/convert/${name}.png`);
         const base64 = Buffer.from(data).toString('base64');
         unlinkSync(`${__dirname}/convert/${name}.png`);
@@ -58,13 +55,10 @@ app.post(path + '/zip', async (req, res) => {
     command.stdin.write(`rm -rf ./${name}/;`);
     command.stdin.end();
 
-    command.stderr.on('data', (err) => {
-        console.error(err);
-        return res.status(500).send('krane cannot process the file.');
-    });
+    command.stderr.on('data', (err) => console.error(err));
 
     command.on('close', (e) => {
-        if (e) return;
+        if (e) return res.status(500).send('krane cannot process the file.');
         const data   = readFileSync(`${__dirname}/convert/${name}.tar.gz`);
         const base64 = Buffer.from(data).toString('base64');
         unlinkSync(`${__dirname}/convert/${name}.tar.gz`);
